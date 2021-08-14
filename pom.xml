@@ -29,6 +29,13 @@
             <artifactId>junit-jupiter</artifactId>
             <scope>test</scope>
         </dependency>
+
+        <dependency>
+            <groupId>org.junit.platform</groupId>
+            <artifactId>junit-platform-runner</artifactId>
+            <version>${junit-platform.version}</version>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
 
     <build>
@@ -72,5 +79,6 @@
 
         <scala.version>2.12.7</scala.version>
         <jupiter.version>5.7.0</jupiter.version>
+        <junit-platform.version>1.2.0</junit-platform.version>
     </properties>
 </project>
