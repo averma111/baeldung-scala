@@ -31,6 +31,10 @@
         </plugins>
     </build>
 
+    <modules>
+        <module>mod1-scala-intro</module>
+    </modules>
+
     <properties>
         <maven.compiler.target>11</maven.compiler.target>
         <maven.compiler.source>11</maven.compiler.source>

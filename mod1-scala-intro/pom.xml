@@ -1,0 +1,13 @@
+<project>
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.example.baeldungscala.intro</groupId>
+    <artifactId>scala-intro</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>jar</packaging>
+
+    <parent>
+        <groupId>com.example.baeldungscala</groupId>
+        <artifactId>baeldung-scala</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+</project>
