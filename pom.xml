@@ -71,6 +71,7 @@
 
     <modules>
         <module>mod1-scala-intro</module>
+        <module>mod2-classes-objects</module>
     </modules>
 
     <properties>
