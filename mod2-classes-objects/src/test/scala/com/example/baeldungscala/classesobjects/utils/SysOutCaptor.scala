@@ -9,4 +9,5 @@ class SysOutCaptor {
   def outputCaptor: PrintStream = new PrintStream(outStreamCaptor)
   def capturedString: String = outStreamCaptor.toString.trim
   def oldOutput: PrintStream = standardOut
+  def capturedStringContains(find: String): Boolean = capturedString contains find
 }
