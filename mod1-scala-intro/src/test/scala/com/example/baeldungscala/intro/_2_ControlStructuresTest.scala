@@ -30,7 +30,7 @@ class _2_ControlStructuresTest {
       count += 1
     } while (count < 10)
 
-    Assertions.assertEquals(9, count)
+    Assertions.assertEquals(10, count)
   }
 
   @Test

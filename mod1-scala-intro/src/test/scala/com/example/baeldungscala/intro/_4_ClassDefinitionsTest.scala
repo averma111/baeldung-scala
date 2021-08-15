@@ -11,7 +11,7 @@ class _4_ClassDefinitionsTest {
     employee.incrementSalary()
 
     Assertions.assertEquals(1020, employee.salary)
-    Assertions.assertEquals("name=John, salary=1020", employee)
+    Assertions.assertEquals("name=John, salary=1020", employee toString)
   }
 
   // Note: using val or var in Constructor means the variables will be public
@@ -20,7 +20,7 @@ class _4_ClassDefinitionsTest {
     def incrementSalary(): Unit = {
       salary += annualIncrement
     }
-    override def toString(): String = s"name=$name, salary=$salary"
+    override def toString: String = s"name=$name, salary=$salary"
   }
 
   @Test
@@ -61,13 +61,13 @@ class _4_ClassDefinitionsTest {
     val employee = new Employee("John", 1000, 50) with StringUpperCaser
     employee.incrementSalary()
 
-    Assertions.assertEquals(1020, employee.salary)
-    Assertions.assertEquals("NAME=JOHN, SALARY=1050", employee)
+    Assertions.assertEquals(1050, employee.salary)
+    Assertions.assertEquals("NAME=JOHN, SALARY=1050", employee toString)
   }
 
   // Note: Similar to interfaces in Java
   trait StringUpperCaser {
-    override def toString = super.toString toUpperCase
+    override def toString: String = super.toString toUpperCase
   }
 
 }

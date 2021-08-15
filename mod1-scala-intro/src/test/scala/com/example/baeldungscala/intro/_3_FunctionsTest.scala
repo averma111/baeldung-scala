@@ -13,7 +13,7 @@ class _3_FunctionsTest {
   def computePower(x: Int, y: Int): Int = {
     def power(i: Int, accumulator: Int): Int = {
       if (i <= 0) accumulator
-      else power(i - i, x * accumulator)
+      else power(i - 1, x * accumulator)
     }
     power(y, 1)
   }
@@ -46,7 +46,7 @@ class _3_FunctionsTest {
   def shouldComposeFunctions_usingCurrying = {
     def sumWhenNumberArgIsHigher(computationFunction: Int => Int)(a: Int, b: Int): Int = {
       if (a > b) 0
-      else computationFunction(a) + sumWhenNumberArgIsHigher(computationFunction)(a + b, b)
+      else computationFunction(a) + sumWhenNumberArgIsHigher(computationFunction)(a + 1, b)
     }
 
     def computeModulo(n: Int)(x: Int) = x % n
