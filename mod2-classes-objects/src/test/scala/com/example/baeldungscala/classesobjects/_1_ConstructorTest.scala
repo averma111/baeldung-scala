@@ -10,12 +10,12 @@ class _1_ConstructorTest {
   @BeforeEach
   def setUp = {
     outputCaptor = new SysOutCaptor()
-    System.setOut(outputCaptor.outputCaptor)
+    System.setOut(outputCaptor.testingCaptor)
   }
 
   @AfterEach
   def tearDown = {
-    System.setOut(outputCaptor.oldOutput)
+    System.setOut(outputCaptor.regularCaptor)
   }
 
   @Test

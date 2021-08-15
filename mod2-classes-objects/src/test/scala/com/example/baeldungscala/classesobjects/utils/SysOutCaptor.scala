@@ -6,8 +6,7 @@ class SysOutCaptor {
   val standardOut: PrintStream = System.out
   val outStreamCaptor: ByteArrayOutputStream = new ByteArrayOutputStream()
 
-  def outputCaptor: PrintStream = new PrintStream(outStreamCaptor)
+  def testingCaptor: PrintStream = new PrintStream(outStreamCaptor)
   def capturedString: String = outStreamCaptor.toString.trim
-  def oldOutput: PrintStream = standardOut
-  def capturedStringContains(find: String): Boolean = capturedString contains find
+  def regularCaptor: PrintStream = standardOut
 }
