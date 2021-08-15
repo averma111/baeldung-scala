@@ -1,12 +1,22 @@
 package com.example.baeldungscala.classesobjects
 
-import org.junit.Test
+import org.junit.jupiter.api.Assertions._
+import org.junit.jupiter.api.Test
 
 class _2_ClassInstanceTest {
 
   @Test
-  def shouldCreateIntanceOfClass(): Unit = {
-    // TODO implement assertions
+  def shouldCreateInstanceOfClass(): Unit = {
+    val car: Car = new Car("Toyota", "SUV", "RAV4")
+
+    car start "remote"
+    assertEquals(0.0, car.speed)
+
+    car.accelerate(2, 5)
+    assertEquals(10.0, car.speed)
+
+    car.brake(1, 3)
+    assertEquals(7.0, car.speed)
   }
 
   class Car(val manufacturer: String, brand: String, var model: String) {
