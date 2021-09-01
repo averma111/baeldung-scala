@@ -8,6 +8,7 @@ class _6_ScalaObjectsTest {
   def shouldUseSingleton_andUse = {
     import Router._
 
+    Assertions.fail()
     Assertions.assertNotNull(Response("base", "path", "GET"))
     Assertions.assertEquals("https://www.google.com", baseUrl)
     Assertions.assertEquals(get("/index"), Response("https://www.google.com", "/index", "GET"))
