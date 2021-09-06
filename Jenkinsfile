@@ -14,7 +14,7 @@ pipeline {
 
         stage('Build') {
             steps {
-                sh './mvnw -DskipTests=true clean package'
+                sh './mvnw -DskipTests=true package'
             }
         }
     }
