@@ -5,7 +5,10 @@ else
 endif
 
 package:
-	$(RUN_MVN) -DskipTests=true clean package
+	$(RUN_MVN) -DskipTests=true package
+build: package
 
 test:
 	$(RUN_MVN) clean test
+
+.PHONY: package build test
