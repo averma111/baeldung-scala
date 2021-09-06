@@ -6,15 +6,15 @@ pipeline {
     }
 
     stages {
-        stage('Test') {
+        stage('Unit Test') {
             steps {
-                sh './mvnw clean test'
+                sh 'make test'
             }
         }
 
-        stage('Build') {
+        stage('Build Jar') {
             steps {
-                sh './mvnw -DskipTests=true package'
+                sh 'make build'
             }
         }
     }
