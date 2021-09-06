@@ -7,11 +7,15 @@ pipeline {
 
     stages {
         stage('Test') {
-            sh './mvnw clean test'
+            steps {
+                sh './mvnw clean test'
+            }
         }
 
         stage('Build') {
-            sh './mvnw -DskipTests=true clean package'
+            steps {
+                sh './mvnw -DskipTests=true clean package'
+            }
         }
     }
 
